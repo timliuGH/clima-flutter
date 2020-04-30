@@ -36,7 +36,3 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return Scaffold();
   }
 }
-
-//temp = decodedData['main']['temp'];
-//condition = decodedData['weather'][0]['id'];
-//cityName = decodedData['name'];
