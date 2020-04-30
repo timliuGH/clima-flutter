@@ -5,9 +5,6 @@ class NetworkHelper {
   NetworkHelper({this.url});
 
   final String url;
-  double temp;
-  int condition;
-  String cityName;
 
   Future getData() async {
     http.Response response = await http.get(url);
