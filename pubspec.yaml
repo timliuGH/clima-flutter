@@ -16,6 +16,9 @@ dependencies:
 
   http: ^0.12.1
 
+  # For loading spinner
+  flutter_spinkit: ^4.1.2+1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

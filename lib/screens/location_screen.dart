@@ -7,6 +7,8 @@ class LocationScreen extends StatefulWidget {
 }
 
 class _LocationScreenState extends State<LocationScreen> {
+//  LocationScreen({this.weatherData});
+//  var weatherData;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
