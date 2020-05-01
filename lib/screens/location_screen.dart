@@ -30,6 +30,11 @@ class _LocationScreenState extends State<LocationScreen> {
     setState(() {
       if (weatherData == null) {
         print('null');
+        temperature = 0;
+        weatherIcon = 'error';
+        weatherMessage = 'error getting data';
+        cityName = '';
+        return;
       }
       temperature = (weatherData['main']['temp']).toInt();
       int condition = weatherData['weather'][0]['id'];
@@ -74,13 +79,14 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   ),
                   FlatButton(
-                    onPressed: () {
-                      Navigator.push(
+                    onPressed: () async {
+                      var inputCity = await Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => CityScreen(),
                         ),
                       );
+                      updateUI(await weatherModel.getWeatherData(inputCity));
                     },
                     child: Icon(
                       Icons.location_city,
